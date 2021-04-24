@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "51476796035",
+    "project_id": "healthical",
+    "storage_bucket": "healthical.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51476796035:android:41004bdca8ff86e03541b6",
+        "android_client_info": {
+          "package_name": "com.example.la_hacks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51476796035-o317b8rhmn396dssqkt1qqnnrnal0et3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_PlNORTsV3TKVcwwReeU1ym4-v0gRJc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51476796035-o317b8rhmn396dssqkt1qqnnrnal0et3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
