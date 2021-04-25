@@ -33,7 +33,6 @@ class AuthService {
       AuthResult result = await _auth.signInWithEmailAndPassword(email: email, password: password);
       FirebaseUser user = result.user;
 
-      await DatabaseService(uid: user.uid).updateUserData('new member', 'prefer not to say', '0', '0', '0', '0', 'medium');
       return _userFromFirebaseUser(user);
     } catch(e) {
       print(e.toString());
@@ -46,6 +45,8 @@ class AuthService {
     try {
       AuthResult result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       FirebaseUser user = result.user;
+      await DatabaseService(uid: user.uid).updateUserData('new member', 'prefer not to say', '0', '0', '0', '0', 'medium');
+
       return _userFromFirebaseUser(user);
     } catch(e) {
       print(e.toString());
