@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:la_hacks/models/stats.dart';
+import 'package:la_hacks/models/stat.dart';
 import 'package:la_hacks/services/auth.dart';
 import 'package:la_hacks/services/database.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<List<Stats>>.value(
+    return StreamProvider<List<Stat>>.value(
         value: DatabaseService().stats,
         child: Scaffold(
           backgroundColor: Colors.red[100],

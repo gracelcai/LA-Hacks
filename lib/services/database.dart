@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:la_hacks/models/stats.dart';
+import 'package:la_hacks/models/stat.dart';
 
 class DatabaseService {
   // collection reference
@@ -21,9 +21,9 @@ class DatabaseService {
   }
 
   // stats list from snapshot
-  List<Stats> _statsListFromSnapshot(QuerySnapshot snapshot) {
+  List<Stat> _statsListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.documents.map((doc) {
-      return Stats(
+      return Stat(
           name: doc.data['name'] ?? '',
           gender: doc.data['gender'] ?? '',
           feet: doc.data['feet'] ?? '',
@@ -35,7 +35,7 @@ class DatabaseService {
     }).toList();
   }
 
-  Stream<List<Stats>> get stats {
+  Stream<List<Stat>> get stats {
     return statsCollection.snapshots().map(_statsListFromSnapshot);
 
   }

@@ -1,4 +1,4 @@
-class Stats {
+class Stat {
   final String name;
   final String gender;
   final String age;
@@ -7,5 +7,5 @@ class Stats {
   final String weight;
   final String exercise;
 
-  Stats({this.name, this.gender, this.age, this.feet, this.inches, this.weight, this.exercise});
+  Stat({this.name, this.gender, this.age, this.feet, this.inches, this.weight, this.exercise});
 }
