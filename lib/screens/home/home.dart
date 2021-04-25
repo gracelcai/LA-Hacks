@@ -18,9 +18,10 @@ class Home extends StatelessWidget {
                 _auth.signOut();
               },
               icon: Icon(Icons.person),
-              label: Text('Logout'))
+              label: Text('Logout')),
         ],
       ),
+
     );
   }
 }

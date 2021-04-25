@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:la_hacks/models/user.dart';
+import 'package:la_hacks/services/database.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -31,6 +32,8 @@ class AuthService {
     try {
       AuthResult result = await _auth.signInWithEmailAndPassword(email: email, password: password);
       FirebaseUser user = result.user;
+
+      await DatabaseService(uid: user.uid).updateUserData('new member', 'prefer not to say', '0', '0', '0', '0', 'medium');
       return _userFromFirebaseUser(user);
     } catch(e) {
       print(e.toString());
